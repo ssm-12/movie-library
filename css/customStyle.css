@@ -1,0 +1,130 @@
+/*Search Panel Related Styles - Starts here*/
+#search-container {
+    height: 88vh;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#inputControlContainer {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+#Result-Container {
+    background-color: rgba(51,51,51,0.5);
+    color: black;
+}
+
+#advanceSearchPanel {
+}
+/*Search Panel Related Styles - Ends here*/
+
+
+
+.navbar-brand img {
+	max-width: 50px;
+	max-height: 50px;
+}
+
+body  {
+    color:#fff;
+    text-align:center;
+    background-image: url('../images/collage.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 12px;
+    font-family: 'Dancing Script', cursive;
+    animation: backgroundScroll 50s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+/*@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: 100vw 0px;}
+}*/
+
+nav {
+	font-family: 'Shrikhand', cursive;
+    font-size: 2em;
+}
+
+/*Logo Animation - Starts Here*/
+.elem{
+    transition-property: transform;
+    transition-duration: 1s;
+
+    animation-name: rotateOnce; 
+    animation-duration: 2s; 
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.elem:hover {
+    animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+@keyframes rotateOnce {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+/*Logo Animation - Ends Here*/
+
+/*Start - Common Styles*/
+.font-white {
+    color: white;
+}
+/*End - Common Styles*/
+
+
+/*Error popup */
+.alert {
+    position: fixed;
+    right: 0;
+    top: 50px;
+}
+
+/*Loader*/
+#loader {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 30vmin;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid red;
+    border-bottom: 16px solid blue;
+    border-left: 16px solid red;
+    width: 40vmin;
+    height: 40vmin;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*Small movie card*/
+.card {
+    height: 100% !important;
+}
+
+.smallCard:hover {
+    transition: all .2s ease-in-out; 
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
+	<!-- Css file -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/customStyle.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<!-- Website Logo -->
+		<a class="navbar-brand" href="#"><img class="elem" src="images/logo.png"></a>
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+	  			<a class="nav-link" href="#">Movie DB</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="search-container" class="container-fluid justify-content-center">
+		<div class="row pt-4 pb-4 pl-2 pr-2">
+			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
+				
+				<!--Start - Search Section-->
+				<div id="inputControlContainer" class="h-100 row align-items-center">
+				  <div class="col p-3">
+				  	
+				  	<!-- Search Title -->
+				  	<div class="row m-2">
+				  		<div class="col">
+				  			<h2>Search For Movie</h2>
+				  		</div>
+				  	</div>
+				  	<!--Start - Search Controls -->
+				  	<div class="row mb-2">
+				  		<div class="col-sm-12 col-md-6 col-lg-6 mb-2">
+				  			<div class="input-group">
+							  <span class="input-group-addon"><b>Movie Name : </b></span>
+							  <input id="txtTitle" type="text" class="form-control" placeholder="Enter name of the movie..." aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+				  		</div>
+				  		<div class="col-sm-12 col-md-6 col-lg-6 mb-2">
+				  			<div class="input-group">
+							  <span class="input-group-addon"><b>Year : </b></span>
+							  <input id="txtYear" type="text" class="form-control" placeholder="Year of release..." aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+				  		</div>
+				  	</div>
+				  	<!--Start - Advance search related controls -->
+				  	<div class="row mb-2">
+				  		<div class="col mb-2">
+				  			<button id="btnAdvSrch" type="button" class="btn btn-outline-secondary btn-sm float-left">
+				  				<i class="far fa-plus-square"></i> Advance Search
+				  			</button>
+				  		</div>
+				  	</div>
+				  	<div id="advanceSearchPanel" class="row mb-2">
+				  		<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-2">
+				  			<div class="input-group">
+				  				<span class="input-group-addon"><b>Search Type : </b></span>
+								<select id="selSearchType" class="col-12 form-control">
+									<option value="a">Approximate Match</option>
+									<option value="e">Exact Match</option>
+								</select>
+							</div>
+						</div>
+				  		<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-2">
+				  			<div class="input-group">
+							  <span class="input-group-addon"><b>IMDB ID : </b></span>
+							  <input id="txtImdbId" type="text" class="form-control" placeholder="Enter IMDB Id..." aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+				  		</div>
+				  		<div class="col-sm-12 col-md-6 col-lg-6 mb-2">
+				  			<div class="input-group">
+				  				<span class="input-group-addon"><b>Category : </b></span>
+								<select id="selCategory" class="col-12 form-control">
+									<option value="">All</option>
+									<option value="movie">Movie</option>
+									<option value="series">Series</option>
+									<option value="episode">Episode</option>
+								</select>
+							</div>
+						</div>
+				  		<div class="col-sm-12 col-md-6 col-lg-6 mb-2">
+				  			<div class="input-group">
+				  				<span class="input-group-addon"><b>Plot Length : </b></span>
+								<select id="selLength" class="col-12 form-control">
+									<option value="">All</option>
+									<option value="short">Short</option>
+									<option value="full">Full</option>
+								</select>
+							</div>
+						</div>
+				  	</div>
+				  	<!--End - Advance search related controls -->
+				  	<div class="row">
+				  		<div class="col">
+				  			<button id="btnSearch" type="button" class="btn btn-primary btn-lg btn-block align-self-start">Search</button>
+				  		</div>
+				  	</div>
+				  	<!--End - Search Controls -->
+
+				  </div>
+				</div>
+				<!--End - Search Section-->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Start - Result View -->
+	<div id="Result-Container" class="container-fluid justify-content-center d-none">
+		<div id="divSearchResults" class="row pt-4 pb-4 pl-2 pr-2">
+			<div class="col-12 font-white">
+				<h1><b>Search Result(s)</b></h1>
+			</div>
+			<!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-4">
+				<div class="card">
+				  <img class="card-img-top" src="#posterSource" alt="Image Not Available">
+				  <div class="card-body">
+				    <h4 class="card-title">#movieTitle</h4>
+				    <h6 class="card-text text-muted">#category</h6>
+				    <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><b>Year: #year</b></li>
+					</ul>
+				  </div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<!-- End - Result View -->
+
+
+	<!-- Start - Movie Details Modal -->
+	<div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p>Modal body text goes here.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Start - Movie Details Modal -->
+
+
+	<!-- Loader - Start -->
+	<div id="loader" class="container-fluid d-none">
+		<div class="row pt-4 pb-4 pl-2 pr-2">
+			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
+				<div class="h-100 row">
+			  		<div class="col-4 offset-4">
+			  			<h4>Fetching data...</h4>
+			  			<div class="loader"></div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Loader - End -->
+
+
+	<!-- Start - Error Popup -->
+	<div class="alert alert-danger d-none" id="error-alert">
+	    <button type="button" class="close" data-dismiss="alert">x</button>
+	    <br>
+	    <strong>Error! </strong>
+	    <i id="errorMsg">An error has occured</i>
+	</div>
+	<!-- End - Error Popup -->
+
+
+	<!-- Importing js files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/UI.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/apiActions.js"></script>
+</body>
+</html>
