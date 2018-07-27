@@ -45,7 +45,7 @@ body  {
     animation-fill-mode: forwards;
 }
 
-@keyframes backgroundScroll {
+/*@keyframes backgroundScroll {
     from {background-position: 0 0;}
     to {background-position: 100vw 0px;}
 }
@@ -53,7 +53,7 @@ body  {
 @-webkit-keyframes backgroundScroll {
     from {background-position: 0 0;}
     to {background-position: 100vw 0px;}
-}
+}*/
 
 nav {
 	font-family: 'Shrikhand', cursive;
