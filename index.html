@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	
 	<!-- Css file -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/customStyle.css">
@@ -25,7 +25,7 @@
 
 	<div id="search-container" class="container-fluid justify-content-center">
 		<div class="row pt-4 pb-4 pl-2 pr-2">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
+			<div class="col-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
 				
 				<!--Start - Search Section-->
 				<div id="inputControlContainer" class="h-100 row align-items-center">
@@ -33,7 +33,7 @@
 				  	
 				  	<!-- Search Title -->
 				  	<div class="row m-2">
-				  		<div class="col">
+				  		<div class="col font-s">
 				  			<h2>Search For Movie</h2>
 				  		</div>
 				  	</div>
@@ -101,7 +101,7 @@
 				  	<!--End - Advance search related controls -->
 				  	<div class="row">
 				  		<div class="col">
-				  			<button id="btnSearch" type="button" class="btn btn-primary btn-lg btn-block align-self-start">Search</button>
+				  			<button id="btnSearch" type="button" class="btn btn-primary btn-lg btn-block align-self-start font-s">Search</button>
 				  		</div>
 				  	</div>
 				  	<!--End - Search Controls -->
@@ -115,55 +115,35 @@
 	</div>
 
 	<!-- Start - Result View -->
-	<div id="Result-Container" class="container-fluid justify-content-center d-none">
+	<div id="Result-Container" class="container-fluid justify-content-center d-none font-lob">
 		<div id="divSearchResults" class="row pt-4 pb-4 pl-2 pr-2">
-			<div class="col-12 font-white">
+			<div class="col-12 font-white font-s">
 				<h1><b>Search Result(s)</b></h1>
 			</div>
-			<!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-4">
-				<div class="card">
-				  <img class="card-img-top" src="#posterSource" alt="Image Not Available">
-				  <div class="card-body">
-				    <h4 class="card-title">#movieTitle</h4>
-				    <h6 class="card-text text-muted">#category</h6>
-				    <ul class="list-group list-group-flush">
-					    <li class="list-group-item"><b>Year: #year</b></li>
-					</ul>
-				  </div>
-				</div>
-			</div> -->
+		</div>
+		<div class="row pt-4 pb-4 pl-2 pr-2">
+			<div class="col-12 font-white font-s">
+				<button id="btnLoadMore" type="button" class="btn btn-primary btn-lg align-self-center font-s">Click to load more...</button>
+			</div>
 		</div>
 	</div>
 	<!-- End - Result View -->
 
 
-	<!-- Start - Movie Details Modal -->
-	<div class="modal" id="exampleModal" tabindex="-1" role="dialog">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title">Modal title</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-	        <p>Modal body text goes here.</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+	<!-- Start - Movie Details -->
+	<div id="MovieDetails" class="container-fluid d-none">
+		<div id="movieDetailsContent" class="row pt-4 pb-4 pl-2 pr-2">
+
+			
+		</div>
 	</div>
-	<!-- Start - Movie Details Modal -->
+	<!-- Start - Movie Details -->
 
 
 	<!-- Loader - Start -->
 	<div id="loader" class="container-fluid d-none">
 		<div class="row pt-4 pb-4 pl-2 pr-2">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
+			<div class="col-12 col-sm-10 col-md-10 col-lg-8 offset-sm-1 offset-md-1 offset-lg-2">
 				<div class="h-100 row">
 			  		<div class="col-4 offset-4">
 			  			<h4>Fetching data...</h4>

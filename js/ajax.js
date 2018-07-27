@@ -2,6 +2,21 @@ let setAjaxCall = () => {
 
 	$("#btnSearch").click(function(event) {
 		event.preventDefault();
+		$("div.smallCard").remove();
+
+		//Get User Input
+		let userInput = fnGetUserInput();
+		if (userInput == false) {
+			ShowErrorPopup("Please enter movie name or IMDB Id");
+		}		
+		else {
+			makeAjaxCall(userInput);
+		}
+
+	});
+
+	$("#btnLoadMore").click(function(event) {
+		event.preventDefault();
 
 		//Get User Input
 		let userInput = fnGetUserInput();
@@ -47,15 +62,27 @@ let getApiURL = (userInput) => {
 		else if (userInput.searchType == "e") {
 			apiURL += "t=" + userInput.searchText + "&";	
 		}
+
+		var numOfShownResult = $(".smallCard").length;
+		if (parseInt(numOfShownResult) > 0) {
+			var pageNumber = (parseInt(numOfShownResult)/10)+1;
+			apiURL += "page=" + pageNumber + "&";
+		}
 	}
 	else {
 		apiURL += "i=" + userInput.searchText + "&";
 	}
 
-	apiURL += "y=" + userInput.yearOfRelease + "&";
-	apiURL += "type=" + userInput.category + "&";
-	apiURL += "plot=" + userInput.plotLength + "&";
-	
+	if (userInput.yearOfRelease != "") {
+		apiURL += "y=" + userInput.yearOfRelease + "&";
+	}
+	if (userInput.category != "") {
+		apiURL += "type=" + userInput.category + "&";
+	}
+	if (userInput.plotLength != "") {
+		apiURL += "plot=" + userInput.plotLength + "&";
+	}
+
 	return apiURL;
 
 }
@@ -99,6 +126,28 @@ let fnValidateInput = () => {
 }
 
 let fetchMovieDetails = () => {
-	let movieID = getMovieID();
-	alert(movieID);
+
+	let moiveID = "";
+	$("body").click(function(e) {
+
+		if ($(e.target).parents(".smallCard").length) {
+
+			var tmp = $(e.target).parents(".smallCard");
+			moiveID = tmp[0].id;
+			movieDetailsAPI(moiveID);
+
+		}
+
+	});
+
+}
+
+let movieDetailsAPI = (movieID) => {
+
+	let objInput = {
+		searchBy: "id",
+		searchText: movieID
+	};
+	makeAjaxCall(objInput);
+
 }

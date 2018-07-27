@@ -15,6 +15,10 @@
     color: black;
 }
 
+#MovieDetails {
+    background-color: rgba(51,51,51,0.1);
+}
+
 #advanceSearchPanel {
 }
 /*Search Panel Related Styles - Ends here*/
@@ -35,14 +39,14 @@ body  {
     background-size: cover;
     font-size: 12px;
     font-family: 'Dancing Script', cursive;
-    animation: backgroundScroll 50s linear infinite;
+    animation: backgroundScroll 80s linear infinite;
     animation-fill-mode: forwards;
 }
 
-/*@keyframes backgroundScroll {
+@keyframes backgroundScroll {
     from {background-position: 0 0;}
     to {background-position: 100vw 0px;}
-}*/
+}
 
 nav {
 	font-family: 'Shrikhand', cursive;
@@ -80,6 +84,10 @@ nav {
 /*Start - Common Styles*/
 .font-white {
     color: white;
+}
+
+.font-black {
+    color: mintcream;
 }
 /*End - Common Styles*/
 
@@ -127,4 +135,45 @@ nav {
     transition: all .2s ease-in-out; 
     transform: scale(1.1);
     cursor: pointer;
+}
+
+/*Detail Tabs*/
+#detailTabs li {
+    width: 33.33%;
+}
+
+#detailTabs li a {
+    color: black;
+    font-size: 1.4em;
+}
+
+/*fonts*/
+.font-s {
+    font-family: 'Shrikhand', cursive;
+}
+
+.font-lob {
+    font-family: 'Lobster Two', cursive;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*Tab Contents Styling*/
+.tab-content, #movieBrief {
+    font-size: 1.3em;
+}
+
+.glow:hover {
+    background-color: orange !important;
+}
+
+/*Button Load More Styling*/
+#btnLoadMore {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+#btnLoadMore:hover {
+    background-color: orange !important;
 }
