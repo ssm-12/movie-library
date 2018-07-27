@@ -49,7 +49,7 @@ let makeAjaxCall = (userInput) => {
 
 let getApiURL = (userInput) => {
 
-	let apiUrlBase = "http://www.omdbapi.com/?apikey=";
+	let apiUrlBase = "https://www.omdbapi.com/?apikey=";
 	let apiKey = "1b0e2b37&";
 	let apiURL = apiUrlBase + apiKey;
 
