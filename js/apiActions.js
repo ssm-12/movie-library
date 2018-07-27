@@ -22,8 +22,6 @@ let successAction = (result) => {
 			}
 		}
 
-		console.log(result);
-
 	}
 	//Movie Not Found
 	else {
