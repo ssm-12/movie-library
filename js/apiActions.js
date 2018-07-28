@@ -206,35 +206,55 @@ let getMovieDetailsHtmlBase = () => {
 										      	<div class="col-12">
 										      		<h3>General Info</h3>
 										      	</div>
-										      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-										      		<table class="table table-striped text-left">
-													  <tbody>
-													    <tr>
-													      <th scope="row"><i class="fas fa-calendar-alt"></i> Released On: </th>
-													      <td>#release</td>
-													    </tr>
-													    <tr>
-													      <th scope="row"><i class="fas fa-atlas"></i> Genre: </th>
-													      <td>#genre</td>
-													    </tr>
-													    <tr>
-													      <th scope="row"><i class="fas fa-globe-americas"></i> Language: </th>
-													      <td>#language</td>
-													    </tr>
-													    <tr>
-													      <th scope="row"><i class="fas fa-link"></i> Website: </th>
-													      <td>#website</td>
-													    </tr>
-													    <tr>
-													      <th scope="row"><i class="fas fa-stopwatch"></i> Runtime: </th>
-													      <td>#runtime</td>
-													    </tr>
-													    <tr>
-													      <th scope="row"><i class="fas fa-trophy"></i> Awards: </th>
-													      <td>#awards</td>
-													    </tr>
-													  </tbody>
-													</table>
+										      	<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-left">
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-calendar-alt"></i> <b>Released On:  </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#release
+														</div>
+													</div>
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-atlas"></i> <b>Genre:  </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#genre
+														</div>
+													</div>
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-globe-americas"></i> <b>Language: </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#language
+														</div>
+													</div>
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-link"></i> <b>Website: </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#website
+														</div>
+													</div>
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-stopwatch"></i> <b>Runtime: </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#runtime
+														</div>
+													</div>
+													<div class="row border border-left-0 border-right-0 p-2">
+														<div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+															<i class="fas fa-trophy"></i> <b>Awards: </b>
+														</div>
+														<div class="col-7 col-sm-7 col-md-9 col-lg-9 col-xl-9">
+															#awards
+														</div>
+													</div>
 										      	</div>
 										      </div>
 										    </div>
