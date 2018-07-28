@@ -18,9 +18,6 @@
 #MovieDetails {
     background-color: rgba(51,51,51,0.1);
 }
-
-#advanceSearchPanel {
-}
 /*Search Panel Related Styles - Ends here*/
 
 
@@ -50,6 +47,12 @@ body  {
     @keyframes backgroundScroll {
         from {background-position: 0 0;}
         to {background-position: 100vw 0px;}
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    body {
+        font-size: 10px;
     }
 }
 
