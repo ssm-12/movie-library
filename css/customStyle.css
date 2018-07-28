@@ -39,21 +39,17 @@ body  {
     background-size: cover;
     font-size: 12px;
     font-family: 'Dancing Script', cursive;
-    webkit-animation: backgroundScroll 80s linear infinite;
-    webkit-animation-fill-mode: forwards;
+}
+
+.bodyAnimate {
     animation: backgroundScroll 80s linear infinite;
     animation-fill-mode: forwards;
 }
 
-/*@keyframes backgroundScroll {
+@keyframes backgroundScroll {
     from {background-position: 0 0;}
     to {background-position: 100vw 0px;}
 }
-
-@-webkit-keyframes backgroundScroll {
-    from {background-position: 0 0;}
-    to {background-position: 100vw 0px;}
-}*/
 
 nav {
 	font-family: 'Shrikhand', cursive;
