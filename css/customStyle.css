@@ -41,14 +41,16 @@ body  {
     font-family: 'Dancing Script', cursive;
 }
 
-.bodyAnimate {
-    animation: backgroundScroll 80s linear infinite;
-    animation-fill-mode: forwards;
-}
+@media only screen and (min-device-width: 780px) {
+    .bodyAnimate {
+        animation: backgroundScroll 80s linear infinite;
+        animation-fill-mode: forwards;
+    }
 
-@keyframes backgroundScroll {
-    from {background-position: 0 0;}
-    to {background-position: 100vw 0px;}
+    @keyframes backgroundScroll {
+        from {background-position: 0 0;}
+        to {background-position: 100vw 0px;}
+    }
 }
 
 nav {
